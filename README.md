@@ -14,13 +14,13 @@ It is assumed you already have an Azure Portal account and active Azure Active D
   * The sign in URL needs to respond to your backend. You can change this later if you don't know the value yet. You can enter `https://localhost` as a placeholder.
   * After creating the Application Registration, save the Application ID in the overview. This is your `clientID`.
   * Open the Settings for your new application.
-  * Open 'Required Permissions'
+  * Open *Required Permissions*
     * Click *Add*, select the Microsoft Graph API.
     * At least assign the following privileges (or all of them): 
       * Application Permissions: *Read all user mailbox settings* (`MailboxSettings.Read`)
       * Application Permissions: *Read all users' full profiles* (`User.Read.All`)
     * Save the settings, then click 'Grant Permissions' in the list of applications. This is important.
-  * Open 'Keys' and add a new password. Copy and keep the value - you won't be able to display it again. This password is your clientSecret.
+  * Open *Keys* and add a new password. Copy and keep the value - you won't be able to display it again. This password is your `clientSecret`.
 
 ### Filling the config
 * Create a copy of the `config.json` template: `cp config.json.tpl config.json`
