@@ -56,7 +56,8 @@ The Azure API works through a JWT-based authentication token. After filling out 
 
 ### Making requests
 The `REQ-endpoint.sh` allows you to query arbitrary endpoints, e.g.:
-```$ ./REQ-endpoint.sh /users/xxxxxxxxxxxxxxxxxxxxx@yourdomain.onmicrosoft.com
+```
+$ ./REQ-endpoint.sh /users/xxxxxxxxxxxxxxxxxxxxx@yourdomain.onmicrosoft.com
 {
   "@odata.context": "https://graph.microsoft.com/beta/$metadata#users/$entity",
   "id": "xxxxxxxxxxxxxxxxxxxxx",
@@ -115,4 +116,5 @@ The `REQ-endpoint.sh` allows you to query arbitrary endpoints, e.g.:
   "assignedLicenses": [],
   "assignedPlans": [],
   "deviceKeys": [],
-}```
+}
+```
