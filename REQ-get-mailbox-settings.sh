@@ -4,7 +4,13 @@ if [ ! -f authtoken ] || [ ! -f config.json ]; then
         exit 1
 fi
 
-TOKEN=$(cat authtoken)
+if [ -z "$1" ]; then
+	echo "Usage: $0 user@domain.com"
+	exit 1
+fi
 
+TOKEN=$(cat authtoken)
 GRAPH_URL=$(jq -r .endpoints.graph config.json)
-curl -s $GRAPH_URL/$1 -H "Authorization: Bearer $TOKEN" | jq .
+
+curl -s $GRAPH_URL/users/$1/MailboxSettings -H "Authorization: Bearer $TOKEN" | jq .
+
